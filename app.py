@@ -25,12 +25,12 @@ def after_request(response):
 
 # Serve routes
 handler(app)
-arts = ascii.create_ascii_art("Ghost server !", "big_money-sw", 500) #big_money-sw, graceful, fire_font-k, big_money-se, big_money-ne, big_money-nw
+arts = ascii.create_ascii_art("Server !", "big_money-sw", 500)
 custom.print(arts, custom.GREEN)
 
 def start_server():
     try:
-        print(f" * Ghost server started at {time.strftime('%Y-%m-%d %H:%M:%S')}")
+        print(f" *Server started at {time.strftime('%Y-%m-%d %H:%M:%S')}")
         print(f" * HTTP Port: {config["application"]['port']}")
         app.run(port=config["application"]['port'], debug=True)
     except Exception as e:

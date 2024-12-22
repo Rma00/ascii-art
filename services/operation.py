@@ -8,11 +8,9 @@ from middleware.controller import ascii
 
 # ASCII-ARTS:-------------------------------------
 def ascii_fonts():
-    # Fetch user data from the database
     fonts = ascii.list_available_fonts()
     print('fonts', fonts)
 
-    # return jsonify({'code': 200, 'message': 'Success User Found !', 'data': get_user}), 200
     return jsonify({'code': 200, 'message': "Success !", 'data': fonts}), 200
 
 
@@ -27,7 +25,6 @@ def ascii_arts():
     
     text = data["text"].upper()
     font = data["font"]
-    # Fetch user data from the database
     ascii_arts = ascii.create_ascii_art(text, font)
     print('ascii_arts\n', ascii_arts)
     return Response(ascii_arts, mimetype='text/plain')
