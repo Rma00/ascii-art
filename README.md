@@ -36,4 +36,4 @@ This project is a Python-based web application built using the Flask framework t
   - Create venv : python3 -m venv venv
   - Activate venv : source venv/bin/activate
   - Install the required dependencies : pip install -r requirements.txt
-  - Run the Flask application : python3 app.py
+  - Run the Flask application : python3 app.py 🚀
